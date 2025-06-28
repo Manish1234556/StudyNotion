@@ -21,10 +21,13 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "http://localhost:3000",
-    credentials:true,
+    origin: [
+      "http://localhost:3000",
+      "https://studynotion-jhmyk31od-manishs-projects-f1141853.vercel.app",
+    ],
+    credentials: true,
   })
-)
+);
 
 app.use(
     fileUpload({
