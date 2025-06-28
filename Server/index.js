@@ -23,7 +23,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:3000",
-      "https://studynotion-jhmyk31od-manishs-projects-f1141853.vercel.app",
+      "https://studynotion-git-main-manishs-projects-f1141853.vercel.app",
     ],
     credentials: true,
   })
