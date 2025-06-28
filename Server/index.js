@@ -24,6 +24,7 @@ app.use(
     origin: [
       "http://localhost:3000",
       "https://studynotion-git-main-manishs-projects-f1141853.vercel.app",
+      "https://studynotion-bice-two.vercel.app", // 🔥 ADD THIS LINE
     ],
     credentials: true,
   })
