@@ -1,25 +1,81 @@
 
+# 📚 StudyNotion
 
-1. Clone the repository to your local machine.
-    ```sh
-    git clone https://github.com/thepranaygupta/react-tailwind-css-starter-pack.git
-    ```
+**StudyNotion** is a full-stack EdTech platform built with the **MERN stack**. It allows users to sign up, log in, create and enroll in courses, and access personalized dashboards based on their role (Student, Instructor, Admin).
 
-1. Install the required packages.
-    ```sh
-    cd react-tailwind-css-starter-pack
-    npm install
-    ```
+> ⚠️ **Note**: This project is under active development. Core features are implemented, but a few components are pending final integration and testing.
 
-1. Start the development server.
-    ```sh
-    npm start
-    ```
-1. Open the project in your browser at [`http://localhost:3000`](http://localhost:3000) to view your project.
-1. Create your React components and add your styles using Tailwind classes. You can also create new CSS files and import them into your components.
+---
 
-The project is set up to use `postcss-cli` to process your CSS files. You can add your own `tailwind.config.js` file to customize your Tailwind setup.
+## 🚀 Tech Stack
 
-## Contributing
+- **Frontend**: React.js, Tailwind CSS  
+- **Backend**: Node.js, Express.js  
+- **Database**: MongoDB + Mongoose  
+- **Authentication**: JWT, Cookies  
+- **Cloud Services**:
+  - **Cloudinary** – For image & video uploads  
+  - **Render** – Hosting backend  
+  - **Vercel** – Hosting frontend  
+- **Testing**: Postman
 
-Contributions are welcome! If you have any suggestions or find any issues, please feel free to open an issue or a pull request.
+---
+
+## ✅ Features Implemented
+
+- 🔐 Email OTP-based Signup & Login  
+- 👨‍🎓 Role-based Dashboards: Student, Instructor, Admin  
+- 📝 Course Creation (with Sections and Subsections)  
+- 📦 Cloudinary Media Upload Integration  
+- 📧 Email Services & Password Reset  
+- 🔗 Fully Connected MERN Stack Setup  
+
+---
+
+## 🔧 Work In Progress
+
+- 💳 Payment Integration (Razorpay/Stripe)  
+- ⭐ Ratings and Course Reviews  
+- 📊 Progress Tracking and Analytics  
+- 🎨 UI Enhancements & Responsiveness
+
+---
+
+## 🐞 Known Issues
+
+- **Double Slash in URLs**: Some routes show URLs like `//auth/login` due to trailing slash in `REACT_APP_BASE_URL`. To fix, avoid trailing slash in `.env`.
+- **Token Null in Deployment**: Occasionally, token appears `null` in production despite working locally. Investigation ongoing.
+
+---
+
+## 📂 Folder Structure
+
+```
+StudyNotion/
+├── client/ # React Frontend
+│ ├── public/ # Static assets and index.html
+│ ├── src/
+│ │ ├── assets/ # Images, videos, icons
+│ │ ├── components/ # Reusable UI components
+│ │ ├── pages/ # Route-based pages
+│ │ ├── services/ # API integration logic
+│ │ ├── utils/ # Utility functions and helpers
+│ │ ├── App.jsx
+│ │ └── index.js
+│ ├── .env
+│ ├── package.json
+│ └── tailwind.config.js
+
+├── server/ # Node + Express Backend
+│ ├── config/ # DB, Cloudinary, CORS config
+│ ├── controllers/ # Request handling logic
+│ ├── middleware/ # Middlewares like auth, etc.
+│ ├── models/ # Mongoose schemas
+│ ├── routes/ # API routes
+│ ├── utils/ # Utility functions
+│ ├── .env
+│ └── index.js # Server entry point
+
+├── README.md
+└── .gitignore
+```
