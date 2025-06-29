@@ -1,4 +1,3 @@
-
 # 📚 StudyNotion
 
 **StudyNotion** is a full-stack EdTech platform built with the **MERN stack**. It allows users to sign up, log in, create and enroll in courses, and access personalized dashboards based on their role (Student, Instructor, Admin).
@@ -21,34 +20,55 @@
 
 ---
 
-## ✅ Features Implemented
+## 🔐 Authentication Flow 
 
-- 🔐 Email OTP-based Signup & Login  
-- 👨‍🎓 Role-based Dashboards: Student, Instructor, Admin  
-- 📝 Course Creation (with Sections and Subsections)  
-- 📦 Cloudinary Media Upload Integration  
-- 📧 Email Services & Password Reset  
-- 🔗 Fully Connected MERN Stack Setup  
+### ✨ Features Implemented
+
+- 🔐 User Signup with OTP Verification  
+- 🔑 Secure Login with JWT Tokens  
+- 📧 OTP Emails sent on Signup using Gmail SMTP  
+- 🛡️ Passwords hashed using `bcrypt`  
+- 💾 MongoDB used to store OTPs and user details  
+
+---
+
+### 🔁 Signup Flow
+
+1. User enters email  
+2. Backend checks if user already exists  
+3. If not, a 6-digit OTP is:
+   - ✅ Generated securely  
+   - ✅ Stored in MongoDB  
+   - ✅ Sent to the user's email via **Nodemailer + Gmail SMTP**
+4. User submits OTP with account details
+5. OTP is verified and account is created
+
+---
+
+### ⚠️ Note on OTP Emails
+
+- OTP emails **are successfully delivered** using Gmail SMTP  
+- However, they might **land in the spam folder** due to:
+  - Gmail domain limitations
+  - Lack of SPF/DKIM verification
+  - Email content being short or generic
+
+✅ You can safely mark them as “Not Spam” .
 
 ---
 
 ## 🔧 Work In Progress
 
-- 💳 Payment Integration (Razorpay/Stripe)  
+- 💳 Payment Integration (Razorpay)  
 - ⭐ Ratings and Course Reviews  
 - 📊 Progress Tracking and Analytics  
 - 🎨 UI Enhancements & Responsiveness
 
 ---
 
-## 🐞 Known Issues
-
-- **Double Slash in URLs**: Some routes show URLs like `//auth/login` due to trailing slash in `REACT_APP_BASE_URL`. To fix, avoid trailing slash in `.env`.
-- **Token Null in Deployment**: Occasionally, token appears `null` in production despite working locally. Investigation ongoing.
-
----
-
 ## 📂 Folder Structure
+
+
 
 ```
 StudyNotion/
