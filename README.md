@@ -6,6 +6,22 @@
 
 ---
 
+## 🌐 Deployment & Monitoring
+
+The application is deployed using modern cloud services and monitored to ensure uptime during live demos.
+
+### ☁️ Cloud Services
+
+- Cloudinary – For image & video uploads  
+- Render – Hosting backend  
+- Vercel – Hosting frontend  
+
+### 🟢 Live Backend Status  
+My backend server is actively monitored and always online.  
+🔗 [Status Page](https://stats.uptimerobot.com/cRv7L1GqIn)  
+![Uptime](https://img.shields.io/uptimerobot/status/m787697912-56e9cd8d03c9eac41d3fe989?label=uptime)
+
+
 ## 🚀 Tech Stack
 
 - **Frontend**: React.js, Tailwind CSS  
